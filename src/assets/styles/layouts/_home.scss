@@ -9,7 +9,13 @@
 
   &__title {
     margin: 0;
-    font-size: variables.rem(35px);
+    /* Reducimos un poco en móvil por seguridad y escalamos en PC */
+    font-size: variables.rem(26px);
+    line-height: 1.2;
+
+    @media (min-width: 600px) {
+      font-size: variables.rem(35px);
+    }
   }
 }
 
@@ -22,8 +28,15 @@
 
   &__title {
     margin-bottom: variables.rem(10px);
-    font-size: variables.rem(45px);
     color: variables.$color-accent;
+    
+    /* CORRECCIÓN MOBILE FIRST */
+    font-size: variables.rem(28px); /* Base para móvil */
+    line-height: 1.3;               /* Evita la superposición */
+
+    @media (min-width: 600px) {
+      font-size: variables.rem(45px); /* Crece en PC */
+    }
   }
 
   &__slogan {
@@ -117,7 +130,11 @@
 
   &__text {
     margin-bottom: variables.rem(15px);
-    text-align: justify;
+    text-align: left; /* CORRECCIÓN: Evita textos raros en pantallas mini */
+
+    @media (min-width: 600px) {
+      text-align: justify; /* Solo se justifica en pantallas más anchas */
+    }
   }
 }
 
