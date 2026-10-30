@@ -1,36 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendación: Los Pilares de la Tierra</title>
+   <!-- Parcel procesará y compilará este archivo SCSS junto con Font Awesome automáticamente --> 
+  <link rel="stylesheet" href="./assets/styles/main.scss">
+</head>
+<body>
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source
-          srcset="./assets/images/logo.png?as=webp&width=350"
-          type="image/webp"
-        />
-        <img
-          src="./assets/images/logo.png?width=350"
-          alt="Universitat Oberta de Catalunya"
-          class="uoc-logo"
-        />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+  <!-- Bloque: Header -->
+  <header class="recommendation-header">
+    <h1 class="recommendation-header__title">Mi Recomendación Literaria</h1>
+  </header>
+
+  <!-- Bloque: Hero Banner -->
+  <div class="hero-banner">
+    <h2 class="hero-banner__title">Los Pilares de la Tierra</h2>
+    <p class="hero-banner__slogan">"Una obra maestra que te transportará a la brutal y fascinante Edad Media."</p>
+  </div>
+
+  <!-- Bloque de diseño: Contenedor principal de la arquitectura de la página -->
+  <main class="main-container">
+    
+    <!-- Bloque BEM: Ficha Técnica (Componente data-card actualizado con imagen) -->
+    <section class="data-card">
+      <h3 class="data-card__title">
+        <i class="fa-solid fa-chart-simple data-card__icon"></i> Ficha Técnica</h3>
+      
+      <!-- Contenedor interno BEM para alinear la imagen y el texto -->
+      <div class="data-card__content">
+        <!-- Elemento Imagen -->
+        <img src="./assets/images/libro.jpg" alt="Portada de Los pilares de la tierra" class="data-card__image">
+        
+        <!-- Elemento Lista -->
+        <ul class="data-card__list">
+          <li class="data-card__item"><strong>Autor:</strong> Ken Follett</li>
+          <li class="data-card__item"><strong>Año de publicación:</strong> 1989</li>
+          <li class="data-card__item"><strong>Género:</strong> Novela histórica</li>
+          <li class="data-card__item"><strong>Páginas:</strong> Más de 1,000 páginas</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Bloque BEM: Sinopsis  -->
+    <article class="content-block">
+      <h3 class="content-block__title">
+        <i class="fa-solid fa-book-open content-block__icon"></i> Sinopsis</h3>
+      <p class="content-block__text">
+        Ambientada en la Inglaterra del siglo XII, la historia gira en torno a la construcción de una gran catedral gótica en el ficticio pueblo de Kingsbridge. A través de este monumental proyecto, se entrelazan las vidas de Tom Builder, un humilde constructor que sueña con levantar un templo; Aliena, una noble caída en gracia; y el prior Philip, un hombre de fe que lucha contra la corrupción.
       </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script>
-    <!-- do not remove this line! -->
-  </body>
+      <p class="content-block__text">
+        En un mundo marcado por la guerra civil, las hambrunas y las brutales luchas de poder entre la Iglesia y la nobleza, la catedral se convierte en el símbolo de la supervivencia, la ambición y la esperanza de todo un pueblo.
+      </p>
+    </article>
+
+    <!-- Bloque BEM: Opinión Personal  -->
+    <article class="content-block">
+      <h3 class="content-block__title"><i class="fa-solid fa-star content-block__icon"></i> ¿Por qué lo recomiendo?</h3>
+      <p class="content-block__text">
+        Lo recomiendo porque es un libro que, a pesar de su grosor, te atrapa desde la primera página. Ken Follett logra crear personajes tan complejos y humanos que terminas sufriendo y celebrando con ellos. 
+      </p>
+      <p class="content-block__text">
+        Además, la forma en que detalla la arquitectura medieval y las intrigas políticas de la época hace que no solo leas una gran historia, sino que sientas que estás viviendo dentro de ella. Es una lectura imprescindible para cualquier amante de las buenas historias.
+      </p>
+    </article>
+
+  </main>
+
+  <!-- Inclusión modular del Footer con PostHTML -->
+  <include src="./views/footer.html"></include>
+
+  <!-- Vinculación del script principal para el entorno Parcel -->
+  <script src="./assets/scripts/main.js" type="module"></script>
+</body>
 </html>

@@ -1,3 +1,5 @@
+@use "variables";
+
 /**
  * Import any npm dependencies in this file
  * see commented examples below
@@ -6,3 +8,24 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+// =========================================================================
+// ITCSS: Generic & Elements
+// =========================================================================
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: variables.$font-main;
+  font-size: variables.rem(16px);
+  line-height: variables.rem(24px);
+  color: variables.$color-text;
+  background-color: variables.$color-bg;
+}

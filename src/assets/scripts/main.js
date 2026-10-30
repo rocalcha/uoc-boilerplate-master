@@ -11,6 +11,6 @@
  */
 
 +(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
+  const bookTitle = "Los Pilares de la Tierra";
+  console.log(`¡Recomendación literaria: ${bookTitle} cargada con éxito!`);
 })();

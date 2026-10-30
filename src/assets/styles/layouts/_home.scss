@@ -1,60 +1,132 @@
 @use "../variables";
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: variables.$font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: variables.$uoc-bg;
-  color: variables.$uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
+/* Bloque Header */
+.recommendation-header {
+  padding: variables.rem(20px);
+  color: variables.$color-white;
   text-align: center;
-  background-color: #fff;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+  background-color: variables.$color-primary;
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: variables.$mqMinWidth) {
-    max-width: none;
+  &__title {
+    margin: 0;
+    font-size: variables.rem(35px);
   }
 }
 
-.uoc-title {
-  font-family: variables.$font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: variables.$uoc-corporate;
+/* Bloque Hero */
+.hero-banner {
+  padding: variables.rem(40px) variables.rem(20px);
+  color: variables.$color-white;
+  text-align: center;
+  background-color: variables.$color-secondary;
 
-  @media (min-width: variables.$mqMinWidth) {
-    font-size: 36px;
+  &__title {
+    margin-bottom: variables.rem(10px);
+    font-size: variables.rem(45px);
+    color: variables.$color-accent;
+  }
+
+  &__slogan {
+    font-size: variables.rem(19px);
+    font-style: italic;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+/* Bloque Layout Contenedor */
+.main-container {
+  max-width: variables.rem(900px);
+  padding: 0 variables.rem(20px);
+  margin: variables.rem(30px) auto;
+}
+
+/* Bloque Ficha Técnica */
+.data-card {
+  padding: variables.rem(20px);
+  margin-bottom: variables.rem(30px);
+  background-color: variables.$color-white;
+  border-left: variables.rem(5px) solid variables.$color-detail;
+  box-shadow: 0 variables.rem(2px) variables.rem(5px) rgba(0, 0, 0, 0.1);
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: variables.rem(15px);
+    color: variables.$color-primary;
+  }
+
+  &__icon {
+    margin-right: variables.rem(8px);
+    color: variables.$color-detail;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: variables.rem(20px);
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: variables.rem(110px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: variables.rem(4px);
+    box-shadow: 0 variables.rem(3px) variables.rem(6px) rgba(0, 0, 0, 0.15);
+
+    @media (min-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    flex: 1;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: variables.rem(8px);
+
+    strong {
+      color: variables.$color-secondary;
+    }
+  }
+}
+
+/* Bloque de Contenidos (Sinopsis y Opinión) */
+.content-block {
+  margin-bottom: variables.rem(30px);
+
+  &__title {
+    padding-bottom: variables.rem(5px);
+    margin-bottom: variables.rem(15px);
+    font-size: variables.rem(24px);
+    color: variables.$color-primary;
+    border-bottom: variables.rem(2px) solid variables.$color-primary;
+  }
+
+  &__icon {
+    margin-right: variables.rem(8px);
+    color: variables.$color-accent;
+  }
+
+  &__text {
+    margin-bottom: variables.rem(15px);
+    text-align: justify;
+  }
+}
+
+/* Bloque Footer */
+.recommendation-footer {
+  padding: variables.rem(15px);
+  margin-top: variables.rem(40px);
+  font-size: variables.rem(14px);
+  color: variables.$color-white;
   text-align: center;
+  background-color: variables.$color-primary;
 }
